@@ -1,4 +1,9 @@
 # Afri Connect Aurora
+
+[Français](#francais) · [English](#english)
+
+<a id="francais"></a>
+# Afri Connect Aurora
 **Retrouvez vos Looks et filtres Aurora sur votre Mac à puce Apple Silicon.**
 
 Creative Tools by **Robin Kapka** · Suite **Afri-Plugin**
@@ -57,5 +62,61 @@ Signalez un problème dans [Issues](https://github.com/afriction/afri-connect-au
 Téléchargement et utilisation gratuits, sans limite ajoutée par le lanceur. Ce dépôt propose la documentation et l’installateur, **sans publier les sources de développement**. L’installateur contient les scripts nécessaires à son fonctionnement dans Photoshop.
 
 Solution indépendante créée par Robin Kapka. Aucune affiliation ni approbation d’Adobe, d’Apple ou de Skylum n’est revendiquée. Photoshop et Aurora HDR ne sont pas inclus ; seuls les composants de la passerelle et leurs ressources d’interface sont distribués.
+
+**Creative Tools by Robin Kapka**
+
+---
+
+<a id="english"></a>
+## English
+**Bring your Aurora Looks and filters back to Photoshop on an Apple Silicon Mac.**
+
+Creative Tools by **Robin Kapka** · **Afri-Plugin**
+
+### Free download
+[Download the Mac installer](https://github.com/afriction/afri-connect-aurora/releases/latest)
+
+### What it does
+Afri Connect Aurora is an independent bridge between native Photoshop and your existing Aurora HDR installation. It opens Aurora's original **Create HDR** workflow, Looks and filters, then brings the rendered result back into Photoshop as a **new Smart Object**, preserving the source document.
+
+This is an action-based workflow, not a native rebuild of Aurora or its old Intel Photoshop plugin. Aurora itself still needs to run through Rosetta.
+
+### Requirements and tested setup
+- Apple Silicon Mac; macOS 12 or later for the launcher.
+- Working, separately licensed installations of **Photoshop** and **Aurora HDR 2019**.
+- Tested locally with **Photoshop 27.6.0** and **Aurora HDR 1.0.2 (6495)**.
+- RGB 8-bit and 16-bit transfers tested. Other versions and configurations remain unverified.
+- The app is ad hoc signed and **not notarized by Apple**. macOS may block its opening on another Mac.
+
+### Install
+1. Download **Afri-Connect-Aurora-Mac.zip** from [Releases](https://github.com/afriction/afri-connect-aurora/releases/latest) and unzip it.
+2. Open **Installer Afri Connect Aurora.app**. The installer interface is currently in French.
+3. Check the detected applications and click **Installer**.
+4. If macOS asks, allow the installer to control Photoshop so it can load the action.
+5. Click **Commencer** to finish and show Photoshop.
+
+No administrator password is required.
+
+### Use
+1. Open your image in Photoshop.
+2. Choose **Window → Actions → Afri Connect Aurora**, then play the action. Shortcut: **Command + Shift + F12**, with Fn if required.
+3. In Aurora, click **Create HDR**.
+4. Pick a Look, adjust filters and click **Apply**.
+5. The rendered image returns to Photoshop as a new Smart Object.
+
+Cancel exits without adding a result. Aurora may take a little time to open.
+
+### Uninstall
+Run the installer again. **Désinstaller** appears when an earlier installation is detected in a managed location. Confirm to remove the launcher and Photoshop action. Transferred files are retained in a local backup. Photoshop, Aurora and your images are kept.
+
+### Scope and limitations
+The bridge transfers the **document's visible composite**, not only the selected layer. The transfer copy is flattened; the original document and its Smart Objects remain intact. The returned Smart Object contains the render, not editable Aurora filter settings. Process one session at a time and keep the source document open and unchanged. Artboards, very large images and other color modes are not validated. This tool does not merge a bracketed exposure sequence inside Photoshop and does not fix Aurora failing to launch as a standalone app.
+
+### Feedback and distribution
+[Report issues](https://github.com/afriction/afri-connect-aurora/issues) with your macOS, Photoshop and Aurora versions, Mac chip and reproduction steps. Remove personal information from screenshots or logs.
+
+Download and use are free, with no limits added by the launcher. This repository contains documentation and the installer, **not the development sources**. Runtime Photoshop scripts are included inside the installer because they are required for the tool to function.
+
+Independent solution by Robin Kapka. No affiliation with or endorsement by Adobe, Apple or Skylum is claimed. Photoshop and Aurora HDR are not included.
 
 **Creative Tools by Robin Kapka**
